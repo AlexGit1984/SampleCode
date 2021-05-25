@@ -7,7 +7,7 @@ package co.test.data.repository
 class LoginRepository(
 private val cloudStore: CloudStore,
 private val localDataStore: LocalDataStore
-) : FrontAuthRepository {
+) {
 
     suspend fun userLogin(email: String, password: String?, code: String?): LoginResult {
         val body = PostUserBody(
